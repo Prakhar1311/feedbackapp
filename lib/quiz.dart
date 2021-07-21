@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 import './question.dart';
-import './answer.dart';
+import 'answer.dart';
 
 class Quiz extends StatelessWidget {
   final List<String> questions;
   final int qindex;
   final Function answerQuestion;
+
+  const initialValue = 0;
 
   Quiz({
     required this.questions,
@@ -28,7 +30,7 @@ class Quiz extends StatelessWidget {
 // class _QuizState extends State<Quiz> {
 //   var qindex;
 
-//   @override
+  @override
   Widget build(BuildContext context) {
     // double score = 0;
     // return Slider(
@@ -47,6 +49,10 @@ class Quiz extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Question(questions[qindex]),
+            Answer(
+              selectHandler: setFeedbackValue,
+              initialValue: initialValue,
+            ),
             SizedBox(
               height: 10,
             ),

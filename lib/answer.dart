@@ -1,10 +1,12 @@
+import 'package:feedbackapp/question.dart';
 import 'package:flutter/material.dart';
 
 class Answer extends StatefulWidget {
   final Function selectHandler;
   final int initialValue;
 
-  Answer({required this.selectHandler, required this.initialValue});
+  Answer(Question question,
+      {required this.selectHandler, required this.initialValue});
 
   @override
   _AnswerState createState() => _AnswerState();
