@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 import './question.dart';
-import 'answer.dart';
+import './answer.dart';
 
 class Quiz extends StatelessWidget {
   final List<String> questions;
   final int qindex;
   final Function answerQuestion;
 
-  int initialValue = 0;
+  var initialVal = 0;
 
   Quiz({
     required this.questions,
@@ -51,7 +51,7 @@ class Quiz extends StatelessWidget {
             Question(questions[qindex]),
             Answer(
               selectHandler: setFeedbackValue,
-              initialValue: initialValue,
+              initialValue: initialVal,
             ),
             SizedBox(
               height: 10,

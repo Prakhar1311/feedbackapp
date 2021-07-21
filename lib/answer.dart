@@ -5,8 +5,7 @@ class Answer extends StatefulWidget {
   final Function selectHandler;
   final int initialValue;
 
-  Answer(Question question,
-      {required this.selectHandler, required this.initialValue});
+  Answer({required this.selectHandler, required this.initialValue});
 
   @override
   _AnswerState createState() => _AnswerState();
