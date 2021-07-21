@@ -8,7 +8,7 @@ class Quiz extends StatelessWidget {
   final int qindex;
   final Function answerQuestion;
 
-  const initialValue = 0;
+  int initialValue = 0;
 
   Quiz({
     required this.questions,
