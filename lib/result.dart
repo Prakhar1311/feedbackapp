@@ -6,30 +6,6 @@ class Result extends StatelessWidget {
 
   Result(this.resultScore, this.resetHandler);
 
-  // String get resultPhrase {
-  //   String resultText = "";
-  //   if (resultScore <= 10) {
-  //     resultText = 'We are sorry for your inconvinience';
-  //     Text(
-  //       "$resultText",
-  //       style: TextStyle(color: Colors.red),
-  //     );
-  //   } else if (resultScore <= 20) {
-  //     resultText = 'Hope we serve you better next time';
-  //     Text(
-  //       "$resultText",
-  //       style: TextStyle(color: Colors.yellow),
-  //     );
-  //   } else if (resultScore <= 30) {
-  //     resultText = 'We hope you come back next time';
-  //     Text(
-  //       "$resultText",
-  //       style: TextStyle(color: Colors.green),
-  //     );
-  //   }
-  //   return resultText;
-  // }
-
   final List<Map<String, dynamic>> result = [
     {
       "resultText": "We are sorry for the inconvenience",
@@ -81,7 +57,7 @@ class Result extends StatelessWidget {
               child: Text(
                 'Restart',
               ),
-              onPressed: () => resetHandler),
+              onPressed: resetHandler),
         ],
       ),
     );
